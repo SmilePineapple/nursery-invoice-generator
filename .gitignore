@@ -2,8 +2,11 @@
 node_modules/
 
 # Build outputs
-out/
+out/make/
 dist/
+
+# Keep the packaged executable for easy download
+!out/nursery-invoice-generator-win32-x64/
 
 # Environment files
 .env
