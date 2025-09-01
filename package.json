@@ -1,0 +1,25 @@
+{
+  "name": "nursery-invoice-generator",
+  "version": "1.0.0",
+  "description": "A simple application for nursery staff to create printable monthly invoices",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "electron": "^28.0.0",
+    "electron-icon-maker": "^0.0.5"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}

@@ -1,0 +1,206 @@
+/* Attendance Page Styles */
+
+/* Legend Styles */
+.attendance-legend {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-legend .card-header {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.time-slot-item, .status-item, .instruction-item {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.slot-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.slot-time {
+    color: #666;
+    font-size: 0.9rem;
+    margin-left: 4px;
+}
+
+/* Calendar Styles */
+.calendar-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-table th {
+    text-align: center;
+    background-color: #4a6fdc;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.calendar-table th.weekend {
+    background-color: #3a5bb9;
+}
+
+.calendar-table td {
+    vertical-align: top;
+    height: 120px;
+    width: 14.28%;
+    padding: 8px;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.2s;
+}
+
+.calendar-table td:hover {
+    background-color: #f8f9fa;
+}
+
+.calendar-table td.weekend {
+    background-color: #f8f9fa;
+}
+
+.calendar-table td.empty-day {
+    background-color: #f0f0f0;
+    border: 1px solid #dee2e6;
+}
+
+.calendar-table td.today {
+    background-color: #fff8e1;
+    border: 2px solid #ffc107;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.today .day-number {
+    background-color: #ffc107;
+    color: #212529;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.slots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.attendance-slot {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.attendance-slot .badge {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.attendance-slot .badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for badge updates */
+@keyframes badge-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.badge-updating {
+    animation: badge-pulse 0.3s ease-in-out;
+}
+
+.attendance-slot .badge.bg-primary {
+    background-color: #0d6efd !important;
+}
+
+.attendance-slot .badge.bg-success {
+    background-color: #198754 !important;
+}
+
+.attendance-slot .badge.bg-light {
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6;
+}
+
+.attendance-slot .slot-label {
+    font-size: 0.8rem;
+    color: #666;
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .calendar-table td {
+        height: 100px;
+        padding: 5px;
+    }
+    
+    .attendance-slot .badge {
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Tooltip styles */
+.attendance-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.attendance-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+}
+
+.attendance-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

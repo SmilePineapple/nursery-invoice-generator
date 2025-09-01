@@ -1,0 +1,195 @@
+/* Simplified Attendance View Styles */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.calendar-table th {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.calendar-table td {
+    text-align: center;
+    padding: 8px;
+    height: 80px;
+    width: 14.28%;
+    vertical-align: top;
+    position: relative;
+}
+
+.calendar-table .weekend {
+    background-color: #f5f5f5;
+    color: #999;
+}
+
+.calendar-table .today {
+    background-color: #e8f4ff;
+}
+
+.calendar-table .day-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.calendar-table .other-month {
+    color: #ccc;
+    background-color: #f9f9f9;
+}
+
+.calendar-table .attendance-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.time-slots-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+}
+
+.slot-label {
+    font-size: 9px;
+    display: block;
+    text-align: center;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.time-slot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1px;
+}
+
+.attendance-badge {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 2px;
+    font-size: 12px;
+}
+
+.attendance-badge:hover {
+    transform: scale(1.1);
+}
+
+.attendance-badge.paid {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.attendance-badge.free {
+    background-color: #198754;
+    color: white;
+}
+
+.attendance-badge.none {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #dee2e6;
+}
+
+/* Simplified legend */
+.attendance-legend {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.attendance-legend .card-header {
+    font-weight: bold;
+}
+
+.attendance-legend .status-item {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.attendance-legend .instruction-item {
+    margin-bottom: 8px;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .calendar-table td {
+        height: 60px;
+        padding: 4px;
+    }
+    
+    .attendance-badge {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+}
+
+/* All-day attendance indicator */
+.all-day-indicator {
+    margin-top: 5px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.all-day-paid {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.all-day-free {
+    background-color: #198754;
+    color: white;
+}
+
+.all-day-mixed {
+    background: linear-gradient(to right, #0d6efd 50%, #198754 50%);
+    color: white;
+}

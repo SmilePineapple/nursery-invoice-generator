@@ -1,0 +1,391 @@
+/* Invoice Print Styles */
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1.3;
+        color: #000;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .invoice-container {
+        width: 100%;
+        max-width: 210mm;
+        margin: 0 auto;
+        padding: 10mm;
+    }
+    
+    .invoice-header {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .invoice-header img {
+        max-width: 100px;
+        margin-bottom: 10px;
+    }
+    
+    .invoice-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .child-info {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    
+    .pricing-info {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+    
+    .registered-info {
+        font-size: 10px;
+        font-style: italic;
+        margin-bottom: 15px;
+    }
+    
+    /* Monthly table styles for print */
+    .month-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 15px;
+        page-break-inside: avoid;
+    }
+    
+    .month-table th, .month-table td {
+        border: 1px solid #000;
+        padding: 4px;
+        text-align: center;
+        font-size: 11px;
+    }
+    
+    .month-table th {
+        background-color: #f0f0f0;
+    }
+    
+    /* Week header styling */
+    .week-header th {
+        background-color: #e6e6e6;
+        text-align: left;
+        font-size: 13px;
+        padding: 6px;
+    }
+    
+    .month-label {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .year-label {
+        font-size: 20px;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .time-slot {
+        width: 18%;
+    }
+    
+    .day-column {
+        width: 12%;
+    }
+    
+    .total-column {
+        width: 10%;
+    }
+    
+    /* Week and month total rows */
+    .week-total-row {
+        background-color: #f9f9f9;
+    }
+    
+    .week-total-label {
+        text-align: right;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+    
+    .week-total-value {
+        font-weight: bold;
+    }
+    
+    .spacer-row td {
+        height: 10px;
+        border: none;
+    }
+    
+    .month-total-row {
+        background-color: #eaf2ff;
+    }
+    
+    .month-total-label {
+        text-align: right;
+        font-weight: bold;
+        font-size: 14px;
+        padding-right: 10px;
+    }
+    
+    .month-total-value {
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .payment-box {
+        border: 1px solid #000;
+        padding: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    .payment-due {
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .payment-total {
+        font-weight: bold;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    .bank-details {
+        border: 1px solid #000;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 11px;
+        float: left;
+        width: 60%;
+    }
+    
+    .accreditation {
+        float: right;
+        width: 30%;
+        text-align: right;
+    }
+    
+    .accreditation img {
+        max-width: 80px;
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    /* Attendance markers */
+    .paid {
+        font-weight: bold;
+    }
+    
+    .free {
+        font-weight: bold;
+    }
+}
+
+/* Preview Styles (for on-screen display) */
+.invoice-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+.invoice-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.invoice-header img {
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+
+.invoice-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.child-info {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pricing-info {
+    font-size: 12px;
+    margin-bottom: 10px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.registered-info {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.month-label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.year-label {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Monthly table styles */
+.month-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.month-table th, .month-table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: center;
+}
+
+.month-table th {
+    background-color: #f2f2f2;
+}
+
+.time-slot {
+    text-align: left;
+    font-weight: normal;
+    width: 120px;
+}
+
+.paid {
+    font-weight: bold;
+    color: #000;
+}
+
+.free {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Week header and totals */
+.week-header th {
+    background-color: #e6e6e6;
+    text-align: left;
+    font-size: 15px;
+    padding: 8px;
+}
+
+.week-total-row {
+    background-color: #f9f9f9;
+}
+
+.week-total-label {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px !important;
+}
+
+.week-total-value {
+    font-weight: bold;
+}
+
+/* Month total and spacer */
+.spacer-row td {
+    height: 10px;
+    border: none;
+}
+
+.month-total-row {
+    background-color: #eaf2ff;
+}
+
+.month-total-label {
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    padding-right: 10px !important;
+}
+
+.month-total-value {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.payment-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.payment-due {
+    margin: 5px 0;
+}
+
+.payment-total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.bank-details {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.accreditations {
+    float: right;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.accreditations img {
+    max-height: 50px;
+    margin-left: 10px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Print-specific styles */
+@media print {
+    .month-table {
+        page-break-inside: avoid;
+    }
+    
+    .week-header {
+        page-break-inside: avoid;
+    }
+    
+    .month-total-row {
+        page-break-inside: avoid;
+    }
+}
+
+/* End of styles */
